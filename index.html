@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 puzzale</title>
+    <style>
+
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .m-container{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .container{
+            margin-top: 200px;
+            display: grid;
+            transform: rotate(x,180);
+            grid-template-columns: repeat(3,1fr);
+
+        }
+        .box{
+            background-color: black;
+            height: 100px;
+            width: 100px;
+            animation: scale-change 2.4s infinite ease-in-out;
+        }
+        .box:nth-child(2),.box:nth-child(4){
+            animation-delay: 0.1s;
+        }
+        .box:nth-child(3),
+        .box:nth-child(5),
+        .box:nth-child(7){
+            animation-delay: 0.2s;
+
+        }
+        .box:nth-child(6),.box:nth-child(8)
+        {
+            animation-delay: 0.3s;
+
+        }
+        .box:nth-child(9){
+            animation-delay: 0.4s;
+        }
+        @keyframes scale-change{
+            0%,70%,100%{
+                transform: scale3D(1,1,1);
+            }
+            35%{
+                transform: scale3D(0,0,1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="m-container">
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</div>
+    
+</body>
+</html>
